@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Barbería Dapper - Barbería premium. Corte, barba y estilo con barberos máster." />
+  <title>Barbería Dapper | Estilo y Elegancia Masculina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #121212;
+      --accent: #D4AF37;
+      --accent-soft: rgba(212, 175, 55, 0.3);
+      --container: #1E1E1E;
+      --text: #F5F5F5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Jost', 'Segoe UI', Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ===== Header ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(18, 18, 18, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text);
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== Botones ===== */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #e6c766, var(--accent) 55%, #b8942b);
+      color: #121212;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 12px 24px;
+      border: 1px solid rgba(255, 230, 160, 0.5);
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+      box-shadow:
+        0 0 22px rgba(212, 175, 55, 0.6),
+        0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px 70px;
+      background:
+        radial-gradient(ellipse at top, rgba(212, 175, 55, 0.14), transparent 55%),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.85) 100%),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      max-width: 800px;
+      margin: 0 auto 16px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 1.25;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero > p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      max-width: 620px;
+      margin: 0 auto 36px;
+      color: rgba(245, 245, 245, 0.9);
+    }
+
+    .btn-whatsapp {
+      font-size: 1.05rem;
+      padding: 16px 34px;
+      margin-bottom: 54px;
+    }
+
+    /* ===== Tarjetas de confianza ===== */
+    .trust-points {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .trust-point {
+      background-color: rgba(30, 30, 30, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid var(--accent-soft);
+      border-radius: 10px;
+      padding: 22px 22px 18px;
+      min-width: 220px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .trust-point:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.5),
+        0 0 26px rgba(212, 175, 55, 0.16);
+    }
+
+    .trust-point .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      border: 1px solid var(--accent-soft);
+      background: rgba(212, 175, 55, 0.08);
+      color: var(--accent);
+    }
+
+    .trust-point .icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .trust-point strong {
+      display: block;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 4px;
+    }
+
+    .trust-point small {
+      color: rgba(245, 245, 245, 0.75);
+      font-size: 0.9rem;
+    }
+
+    /* ===== Sección Servicios ===== */
+    .servicios {
+      padding: 90px 20px;
+      background: var(--bg);
+    }
+
+    .section-kicker {
+      font-size: 0.85rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-weight: 300;
+      color: rgba(245, 245, 245, 0.75);
+      max-width: 560px;
+      margin: 0 auto 48px;
+    }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: var(--container);
+      border: 1px solid var(--accent-soft);
+      border-radius: 12px;
+      padding: 28px 24px 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.5),
+        0 0 26px rgba(212, 175, 55, 0.14);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: linear-gradient(135deg, #e6c766, var(--accent) 55%, #b8942b);
+      color: #121212;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.45);
+    }
+
+    .service-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-right: 80px;
+    }
+
+    .service-price {
+      color: var(--accent);
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .service-desc {
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: rgba(245, 245, 245, 0.75);
+      line-height: 1.6;
+    }
+
+    .service-cta {
+      margin-top: auto;
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      border: 1px solid var(--accent-soft);
+      border-radius: 8px;
+      padding: 11px 16px;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-cta:hover {
+      background-color: var(--accent);
+      color: #121212;
+      box-shadow: 0 0 22px rgba(212, 175, 55, 0.5);
+    }
+
+    /* ===== Sección Ubicación ===== */
+    .ubicacion {
+      padding: 90px 20px;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--container) 100%);
+    }
+
+    .ubicacion-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .ubicacion-info {
+      background: rgba(30, 30, 30, 0.7);
+      border: 1px solid var(--accent-soft);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .ubicacion-detalles {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .ubicacion-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .ubicacion-item svg {
+      width: 24px;
+      height: 24px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .ub-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .ub-value {
+      color: var(--text);
+      font-size: 1.02rem;
+    }
+
+    .ub-value a {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+
+    .ub-value a:hover {
+      color: #e6c766;
+    }
+
+    .horarios ul {
+      list-style: none;
+    }
+
+    .horarios li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .horarios li:last-child {
+      border-bottom: none;
+    }
+
+    .horarios .day {
+      color: rgba(245, 245, 245, 0.85);
+    }
+
+    .horarios .time {
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .map-wrap {
+      border: 1px solid var(--accent-soft);
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 360px;
+    }
+
+    .map-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+      filter: grayscale(40%) invert(92%) hue-rotate(180deg) contrast(0.92);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0e0e0e;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 44px 20px 28px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .footer-logo span {
+      color: var(--accent);
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--accent-soft);
+      border-radius: 50%;
+      color: var(--text);
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: var(--accent);
+      color: #121212;
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.45);
+    }
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: rgba(245, 245, 245, 0.55);
+    }
+
+    /* ===== Botón flotante WhatsApp ===== */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .float-whatsapp:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.6);
+    }
+
+    .float-whatsapp svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    .float-whatsapp::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #25D366;
+      z-index: -1;
+      animation: pulse 2s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+      70% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+    }
+
+    /* ===== Media queries (mobile-first) ===== */
+    @media (min-width: 640px) {
+      .hero {
+        padding: 140px 20px 90px;
+      }
+
+      .hero h1 {
+        font-size: 3.4rem;
+      }
+
+      .section-title {
+        font-size: 2.6rem;
+      }
+
+      .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .servicios-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .ubicacion-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+      }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      .btn-reservar {
+        width: 100%;
+        text-align: center;
+      }
+
+      .trust-points {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">Dapper<span>.</span></a>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="https://wa.me/" class="btn btn-reservar">Reservar Cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero-kicker">Barbería Premium</p>
+      <h1>Estilo que <span>Habla</span> por Ti</h1>
+      <p>Elegancia masculina a nivel premium. Cortes precisos, barba perfecta y una experiencia pensada para el hombre que exige distinción.</p>
+
+      <a href="https://wa.me/" class="btn btn-whatsapp">Reservar Cita por WhatsApp</a>
+
+      <div class="trust-points">
+        <div class="trust-point">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <path d="M12 13l2 2-2 2"></path>
+            </svg>
+          </span>
+          <strong>Atención con o sin cita</strong>
+          <small>Te recibimos siempre, a tu ritmo.</small>
+        </div>
+        <div class="trust-point">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="6" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+            </svg>
+          </span>
+          <strong>Barberos máster</strong>
+          <small>Arte, precisión y años de experiencia.</small>
+        </div>
+        <div class="trust-point">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 3h10l-1.5 6v8a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2V9z"></path>
+              <path d="M6 3h12a1 1 0 0 1 1 1v1H5V4a1 1 0 0 1 1-1z"></path>
+              <line x1="10" y1="12" x2="14" y2="12"></line>
+            </svg>
+          </span>
+          <strong>Bebida de cortesía</strong>
+          <small>Disfruta mientras te reinas.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+      <p class="section-kicker">Nuestro menú</p>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-subtitle">Cada servicio es una experiencia diseñada para el hombre que exige distinción. Elige el tuyo.</p>
+
+      <div class="servicios-grid">
+        <article class="service-card">
+          <h3 class="service-name">Corte Clásico</h3>
+          <p class="service-price">$12.000</p>
+          <p class="service-desc">Lavado, corte con tijera o máquina, perfilado de contornos y peinado a tu medida.</p>
+          <a href="https://wa.me/" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card">
+          <h3 class="service-name">Ritual de Barba</h3>
+          <p class="service-price">$9.000</p>
+          <p class="service-desc">Toalla caliente, pre-afeitado, recorte con navaja, aceites y cierre con crema hidratante.</p>
+          <a href="https://wa.me/" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-badge">Popular</span>
+          <h3 class="service-name">Combo Dapper Leyenda</h3>
+          <p class="service-price">$18.000</p>
+          <p class="service-desc">Corte clásico + ritual de barba completo, bebida de cortesía y styling final de firma.</p>
+          <a href="https://wa.me/" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card">
+          <h3 class="service-name">Limpieza Facial</h3>
+          <p class="service-price">$15.000</p>
+          <p class="service-desc">Limpieza profunda, exfoliación y mascarilla revitalizante para una piel impecable.</p>
+          <a href="https://wa.me/" class="service-cta">Agendar este servicio</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="ubicacion" id="ubicacion">
+      <p class="section-kicker">Visítanos</p>
+      <h2 class="section-title">Dónde Encontrarnos</h2>
+      <p class="section-subtitle">Te esperamos en un espacio diseñado para tu comodidad.</p>
+
+      <div class="ubicacion-grid">
+        <div class="ubicacion-info">
+          <div class="ubicacion-detalles">
+            <div class="ubicacion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <p class="ub-title">Dirección</p>
+                <p class="ub-value">Calle Principal #12-34, Zona Rosa</p>
+              </div>
+            </div>
+            <div class="ubicacion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <div>
+                <p class="ub-title">Teléfono / WhatsApp</p>
+                <p class="ub-value"><a href="tel:+573000000000">+57 300 000 0000</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="horarios">
+            <h3 class="ub-title">Horarios de atención</h3>
+            <ul>
+              <li><span class="day">Lunes a Viernes</span><span class="time">9:00 AM - 8:00 PM</span></li>
+              <li><span class="day">Sábados</span><span class="time">8:00 AM - 9:00 PM</span></li>
+              <li><span class="day">Domingos y Festivos</span><span class="time">10:00 AM - 5:00 PM</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=Zona%20Rosa&output=embed"
+            title="Mapa de la Barbería Dapper"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="footer-logo">Dapper<span>.</span></a>
+    <div class="footer-socials">
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 Barbería Dapper. Todos los derechos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/" class="float-whatsapp" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.6 5.95L0 24l6.32-1.66a11.8 11.8 0 0 0 5.72 1.46h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.18-1.24-6.17-3.41-8.43zM12.05 21.75a9.8 9.8 0 0 1-5.01-1.37l-.36-.21-3.75.98 1-3.65-.24-.38a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.84 9.84 0 0 1 7 2.9 9.83 9.83 0 0 1 2.9 6.99c-.01 5.45-4.45 9.88-9.93 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.13-.28-.2-.58-.35z"></path>
+    </svg>
+  </a>
+
+</body>
+</html>
