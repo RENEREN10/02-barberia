@@ -10,8 +10,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dapper Peluquería y Barbería premium. Cortes para hombres y mujeres, color, barba y estilo." />
-  <title>Dapper Peluquería y Barbería | Estilo para Él y Ella</title>
+  <meta name="description" data-i18n-content="meta.desc.home" content="Dapper Peluquería y Barbería premium. Cortes para hombres y mujeres, color, barba y estilo." />
+  <title data-i18n="meta.title.home">Dapper Peluquería y Barbería | Estilo para Él y Ella</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -24,10 +24,14 @@
     <div class="header-inner">
       <a href="index.html" class="logo">Dapper<span>.</span></a>
       <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#resenas">Reseñas</a>
-        <a href="https://wa.me/" class="btn btn-reservar">Reservar Cita</a>
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#ubicacion" data-i18n="nav.location">Ubicación</a>
+        <a href="#resenas" data-i18n="nav.reviews">Reseñas</a>
+        <a href="https://wa.me/" class="btn btn-reservar" data-i18n="nav.book">Reservar Cita</a>
+        <div class="lang-switch" role="group" aria-label="Cambiar idioma / Change language">
+          <button type="button" data-lang="es" class="is-active" aria-label="Español">ES</button>
+          <button type="button" data-lang="en" aria-label="English">EN</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -46,9 +50,9 @@
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <p class="hero-kicker">Peluquería &amp; Barbería Premium</p>
-        <h1>Estilo que <span>Habla</span> por Ti</h1>
-        <p class="hero-description">Belleza y estilo premium para hombres y mujeres. Cortes precisos, color, barba perfecta y una experiencia pensada para quienes exigen distinción.</p>
+        <p class="hero-kicker" data-i18n="hero.kicker">Peluquería &amp; Barbería Premium</p>
+        <h1 data-i18n="hero.title">Estilo que <span>Habla</span> por Ti</h1>
+        <p class="hero-description" data-i18n="hero.desc">Belleza y estilo premium para hombres y mujeres. Cortes precisos, color, barba perfecta y una experiencia pensada para quienes exigen distinción.</p>
       </div>
     </section>
 
@@ -56,38 +60,38 @@
     <section class="experiencia" id="experiencia">
       <div class="exp-grid">
         <div class="exp-left reveal">
-          <p class="exp-kicker">Estás a una cita de tu mejor versión</p>
-          <h2>Donde el estilo se convierte en <span>experiencia</span></h2>
+          <p class="exp-kicker" data-i18n="exp.kicker">Estás a una cita de tu mejor versión</p>
+          <h2 data-i18n="exp.title">Donde el estilo se convierte en <span>experiencia</span></h2>
           <span class="exp-line" aria-hidden="true"></span>
         </div>
         <div class="exp-right reveal">
-          <p>Bienvenido a <strong>Dapper Peluquería &amp; Barbería</strong>, un espacio donde la elegancia se vive en cada detalle. Aquí el cuidado personal va más allá de un corte: es un ritual de estilo para hombres, mujeres y adolescentes que buscan verse y sentirse excepcionales.</p>
-          <p>De un fade impecable a un color luminoso, de la barba perfectamente perfilada a un cepillado con acabado premium. Nuestro equipo de barberos y estilistas combina técnica, productos de alta gama y atención cálida para que cada visita sea un momento para ti. Agenda tu cita y vive la distinción en cada detalle.</p>
-          <a href="https://wa.me/" class="exp-link">Agendar mi cita →</a>
+          <p data-i18n="exp.p1">Bienvenido a <strong>Dapper Peluquería &amp; Barbería</strong>, un espacio donde la elegancia se vive en cada detalle. Aquí el cuidado personal va más allá de un corte: es un ritual de estilo para hombres, mujeres y adolescentes que buscan verse y sentirse excepcionales.</p>
+          <p data-i18n="exp.p2">De un fade impecable a un color luminoso, de la barba perfectamente perfilada a un cepillado con acabado premium. Nuestro equipo de barberos y estilistas combina técnica, productos de alta gama y atención cálida para que cada visita sea un momento para ti. Agenda tu cita y vive la distinción en cada detalle.</p>
+          <a href="https://wa.me/" class="exp-link" data-i18n="exp.link">Agendar mi cita →</a>
         </div>
       </div>
     </section>
 
     <!-- ===== BLOQUE: SERVICIOS PORTADA - Elige Hombre o Dama ===== -->
     <section class="servicios" id="servicios">
-      <p class="section-kicker reveal">Nuestro menú</p>
-      <h2 class="section-title reveal">Nuestros Servicios</h2>
-      <p class="section-subtitle reveal">Para él y para ella. Elige tu categoría y descubre todos los servicios, combos y precios.</p>
+      <p class="section-kicker reveal" data-i18n="services.kicker">Nuestro menú</p>
+      <h2 class="section-title reveal" data-i18n="services.title">Nuestros Servicios</h2>
+      <p class="section-subtitle reveal" data-i18n="services.subtitle">Para él y para ella. Elige tu categoría y descubre todos los servicios, combos y precios.</p>
 
       <div class="categorias-grid">
         <!-- Tarjeta Hombre -->
         <article class="categoria-card reveal">
           <div class="categoria-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=80')" aria-hidden="true"></div>
           <div class="categoria-body">
-            <span class="categoria-tag">Para Él</span>
-            <h3>Servicios Hombre</h3>
-            <p>Cortes fade, clásicos, barba, facial y combos.</p>
+            <span class="categoria-tag" data-i18n="men.tag">Para Él</span>
+            <h3 data-i18n="men.title">Servicios Hombre</h3>
+            <p data-i18n="men.desc">Cortes fade, clásicos, barba, facial y combos.</p>
             <ul class="categoria-list">
-              <li>Corte clásico y fade</li>
-              <li>Ritual de barba con toalla caliente</li>
-              <li>Combos corte + barba + facial</li>
+              <li data-i18n="men.li1">Corte clásico y fade</li>
+              <li data-i18n="men.li2">Ritual de barba con toalla caliente</li>
+              <li data-i18n="men.li3">Combos corte + barba + facial</li>
             </ul>
-            <a href="servicios-hombre.html" class="btn">Ver servicios de hombre</a>
+            <a href="servicios-hombre.html" class="btn" data-i18n="men.btn">Ver servicios de hombre</a>
           </div>
         </article>
 
@@ -95,15 +99,15 @@
         <article class="categoria-card reveal">
           <div class="categoria-media" style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=80')" aria-hidden="true"></div>
           <div class="categoria-body">
-            <span class="categoria-tag">Para Ella</span>
-            <h3>Servicios Dama</h3>
-            <p>Corte, color, cepillado, alisados y combos.</p>
+            <span class="categoria-tag" data-i18n="women.tag">Para Ella</span>
+            <h3 data-i18n="women.title">Servicios Dama</h3>
+            <p data-i18n="women.desc">Corte, color, cepillado, alisados y combos.</p>
             <ul class="categoria-list">
-              <li>Corte, cepillado y tratamientos</li>
-              <li>Color, rayitos y balayage</li>
-              <li>Combos corte + color + peinado</li>
+              <li data-i18n="women.li1">Corte, cepillado y tratamientos</li>
+              <li data-i18n="women.li2">Color, rayitos y balayage</li>
+              <li data-i18n="women.li3">Combos corte + color + peinado</li>
             </ul>
-            <a href="servicios-dama.html" class="btn">Ver servicios de dama</a>
+            <a href="servicios-dama.html" class="btn" data-i18n="women.btn">Ver servicios de dama</a>
           </div>
         </article>
       </div>
@@ -111,9 +115,9 @@
 
     <!-- ===== BLOQUE: POR QUÉ ELEGIRNOS - 3 beneficios (antes en el hero) ===== -->
     <section class="porque" id="porque">
-      <p class="section-kicker reveal">Por qué elegirnos</p>
-      <h2 class="section-title reveal">Una Experiencia Pensada Para Ti</h2>
-      <p class="section-subtitle reveal">Detalles que hacen diferente cada visita a Dapper.</p>
+      <p class="section-kicker reveal" data-i18n="why.kicker">Por qué elegirnos</p>
+      <h2 class="section-title reveal" data-i18n="why.title">Una Experiencia Pensada Para Ti</h2>
+      <p class="section-subtitle reveal" data-i18n="why.subtitle">Detalles que hacen diferente cada visita a Dapper.</p>
 
       <div class="trust-points">
         <div class="trust-point reveal">
@@ -126,8 +130,8 @@
               <path d="M12 13l2 2-2 2"></path>
             </svg>
           </span>
-          <strong>Atención con o sin cita</strong>
-          <small>Te recibimos siempre, a tu ritmo.</small>
+          <strong data-i18n="why.1.title">Atención con o sin cita</strong>
+          <small data-i18n="why.1.text">Te recibimos siempre, a tu ritmo.</small>
         </div>
         <div class="trust-point reveal">
           <span class="icon">
@@ -139,8 +143,8 @@
               <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
             </svg>
           </span>
-          <strong>Especialistas en él y ella</strong>
-          <small>Barberos máster y estilistas profesionales.</small>
+          <strong data-i18n="why.2.title">Especialistas en él y ella</strong>
+          <small data-i18n="why.2.text">Barberos máster y estilistas profesionales.</small>
         </div>
         <div class="trust-point reveal">
           <span class="icon">
@@ -150,17 +154,17 @@
               <line x1="10" y1="12" x2="14" y2="12"></line>
             </svg>
           </span>
-          <strong>Bebida de cortesía</strong>
-          <small>Disfruta mientras te consienten.</small>
+          <strong data-i18n="why.3.title">Bebida de cortesía</strong>
+          <small data-i18n="why.3.text">Disfruta mientras te consienten.</small>
         </div>
       </div>
     </section>
 
     <!-- ===== BLOQUE: UBICACIÓN - Dirección, horarios y mapa ===== -->
     <section class="ubicacion" id="ubicacion">
-      <p class="section-kicker reveal">Visítanos</p>
-      <h2 class="section-title reveal">Dónde Encontrarnos</h2>
-      <p class="section-subtitle reveal">Te esperamos en un espacio diseñado para tu comodidad.</p>
+      <p class="section-kicker reveal" data-i18n="location.kicker">Visítanos</p>
+      <h2 class="section-title reveal" data-i18n="location.title">Dónde Encontrarnos</h2>
+      <p class="section-subtitle reveal" data-i18n="location.subtitle">Te esperamos en un espacio diseñado para tu comodidad.</p>
 
       <div class="ubicacion-grid">
         <div class="ubicacion-info reveal">
@@ -171,8 +175,8 @@
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               <div>
-                <p class="ub-title">Dirección</p>
-                <p class="ub-value">Calle Principal #12-34, Zona Rosa</p>
+                <p class="ub-title" data-i18n="location.addrLabel">Dirección</p>
+                <p class="ub-value" data-i18n="location.addrValue">Calle Principal #12-34, Zona Rosa</p>
               </div>
             </div>
             <div class="ubicacion-item">
@@ -180,18 +184,18 @@
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               <div>
-                <p class="ub-title">Teléfono / WhatsApp</p>
+                <p class="ub-title" data-i18n="location.phoneLabel">Teléfono / WhatsApp</p>
                 <p class="ub-value"><a href="tel:+573000000000">+57 300 000 0000</a></p>
               </div>
             </div>
           </div>
 
           <div class="horarios">
-            <h3 class="ub-title">Horarios de atención</h3>
+            <h3 class="ub-title" data-i18n="location.hoursTitle">Horarios de atención</h3>
             <ul>
-              <li><span class="day">Lunes a Viernes</span><span class="time">9:00 AM - 8:00 PM</span></li>
-              <li><span class="day">Sábados</span><span class="time">8:00 AM - 9:00 PM</span></li>
-              <li><span class="day">Domingos y Festivos</span><span class="time">10:00 AM - 5:00 PM</span></li>
+              <li><span class="day" data-i18n="location.day1">Lunes a Viernes</span><span class="time">9:00 AM - 8:00 PM</span></li>
+              <li><span class="day" data-i18n="location.day2">Sábados</span><span class="time">8:00 AM - 9:00 PM</span></li>
+              <li><span class="day" data-i18n="location.day3">Domingos y Festivos</span><span class="time">10:00 AM - 5:00 PM</span></li>
             </ul>
           </div>
         </div>
@@ -199,6 +203,7 @@
         <div class="map-wrap reveal">
           <iframe
             src="https://www.google.com/maps?q=Zona%20Rosa&output=embed"
+            data-i18n-title="location.mapTitle"
             title="Mapa de Dapper Peluquería y Barbería"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -209,43 +214,43 @@
 
     <!-- ===== BLOQUE: RESEÑAS - Opiniones positivas de clientes ===== -->
     <section class="resenas" id="resenas">
-      <p class="section-kicker reveal">Opiniones reales</p>
-      <h2 class="section-title reveal">Lo Que Dicen Nuestros Clientes</h2>
-      <p class="section-subtitle reveal">La confianza se gana corte a corte. Esto opinan quienes ya vivieron la experiencia Dapper.</p>
+      <p class="section-kicker reveal" data-i18n="reviews.kicker">Opiniones reales</p>
+      <h2 class="section-title reveal" data-i18n="reviews.title">Lo Que Dicen Nuestros Clientes</h2>
+      <p class="section-subtitle reveal" data-i18n="reviews.subtitle">La confianza se gana corte a corte. Esto opinan quienes ya vivieron la experiencia Dapper.</p>
 
       <div class="resenas-grid">
         <article class="resena-card reveal">
           <div class="resena-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="resena-texto">“El mejor fade que me han hecho. Precisos, puntuales y el ritual de barba es otro nivel. Salí renovado.”</p>
+          <p class="resena-texto" data-i18n="review1.text">“El mejor fade que me han hecho. Precisos, puntuales y el ritual de barba es otro nivel. Salí renovado.”</p>
           <div class="resena-autor">
             <span class="resena-avatar" aria-hidden="true">A</span>
             <div>
               <strong>Andrés M.</strong>
-              <small>Corte Fade + Barba</small>
+              <small data-i18n="review1.service">Corte Fade + Barba</small>
             </div>
           </div>
         </article>
 
         <article class="resena-card reveal">
           <div class="resena-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="resena-texto">“Mi balayage quedó espectacular, el color tal como lo pedí. Me asesoraron con calma y el trato fue hermoso.”</p>
+          <p class="resena-texto" data-i18n="review2.text">“Mi balayage quedó espectacular, el color tal como lo pedí. Me asesoraron con calma y el trato fue hermoso.”</p>
           <div class="resena-autor">
             <span class="resena-avatar" aria-hidden="true">C</span>
             <div>
               <strong>Carolina R.</strong>
-              <small>Color + Cepillado</small>
+              <small data-i18n="review2.service">Color + Cepillado</small>
             </div>
           </div>
         </article>
 
         <article class="resena-card reveal">
           <div class="resena-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p class="resena-texto">“Llevé a mi hija adolescente por su primer corte y salió feliz. Lugar limpio, ambiente elegante y gran atención.”</p>
+          <p class="resena-texto" data-i18n="review3.text">“Llevé a mi hija adolescente por su primer corte y salió feliz. Lugar limpio, ambiente elegante y gran atención.”</p>
           <div class="resena-autor">
             <span class="resena-avatar" aria-hidden="true">V</span>
             <div>
               <strong>Valentina G.</strong>
-              <small>Corte + Tratamiento</small>
+              <small data-i18n="review3.service">Corte + Tratamiento</small>
             </div>
           </div>
         </article>
@@ -256,7 +261,7 @@
   <!-- ===== BLOQUE: FOOTER - Logo, redes y copyright ===== -->
   <footer>
     <a href="index.html" class="footer-logo">Dapper<span>.</span></a>
-    <p class="footer-tag">Peluquería &amp; Barbería</p>
+    <p class="footer-tag" data-i18n="footer.tag">Peluquería &amp; Barbería</p>
     <div class="footer-socials">
       <a href="#" class="social-link" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -271,11 +276,11 @@
         </svg>
       </a>
     </div>
-    <p class="footer-copy">© <span id="year">2026</span> Dapper Peluquería y Barbería. Todos los derechos reservados.</p>
+    <p class="footer-copy">© <span id="year">2026</span> <span data-i18n="footer.rights">Dapper Peluquería y Barbería. Todos los derechos reservados.</span></p>
   </footer>
 
   <!-- ===== BLOQUE: WHATSAPP FLOTANTE - Acceso rápido a reservas ===== -->
-  <a href="https://wa.me/" class="float-whatsapp" aria-label="Escríbenos por WhatsApp">
+  <a href="https://wa.me/" class="float-whatsapp" data-i18n-aria="whatsapp.aria" aria-label="Escríbenos por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.6 5.95L0 24l6.32-1.66a11.8 11.8 0 0 0 5.72 1.46h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.18-1.24-6.17-3.41-8.43zM12.05 21.75a9.8 9.8 0 0 1-5.01-1.37l-.36-.21-3.75.98 1-3.65-.24-.38a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.84 9.84 0 0 1 7 2.9 9.83 9.83 0 0 1 2.9 6.99c-.01 5.45-4.45 9.88-9.93 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.13-.28-.2-.58-.35z"></path>
     </svg>
