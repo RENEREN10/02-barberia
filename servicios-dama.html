@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- =====================================================
+  ARCHIVO: servicios-dama.html
+  DESCRIPCIÓN: Detalle de servicios para dama.
+  Corte, color, peinado y combos con precios ejemplo.
+===================================================== -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servicios para dama en Dapper: corte, color, cepillado, alisados y combos." />
+  <title>Servicios Dama | Dapper Peluquería y Barbería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== BLOQUE: HEADER - Navegación (reutilizada del home) ===== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">Dapper<span>.</span></a>
+      <nav>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#ubicacion">Ubicación</a>
+        <a href="index.html#resenas">Reseñas</a>
+        <a href="https://wa.me/" class="btn btn-reservar">Reservar Cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== BLOQUE: HERO INTERNO - Título de la categoría ===== -->
+    <section class="detalle-hero">
+      <div class="detalle-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1600&q=80')" aria-hidden="true"></div>
+      <p class="section-kicker">Para Ella</p>
+      <h1>Servicios <span>Dama</span></h1>
+      <p>Corte, color y peinado con acabado premium, pensados para resaltar tu estilo único.</p>
+      <a href="index.html#servicios" class="back-link">← Volver a servicios</a>
+    </section>
+
+    <!-- ===== BLOQUE: LISTADO SERVICIOS DAMA - Cards con precios ===== -->
+    <section class="servicios">
+      <div class="servicios-grid">
+        <article class="service-card reveal">
+          <h3 class="service-name">Corte Dama</h3>
+          <p class="service-price">$35.000</p>
+          <p class="service-desc">Asesoría de estilo, lavado, corte a medida y cepillado final con acabado suave.</p>
+          <a href="https://wa.me/?text=Hola%20quiero%20agendar%20Corte%20Dama" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card reveal">
+          <h3 class="service-name">Cepillado + Tratamiento</h3>
+          <p class="service-price">$30.000</p>
+          <p class="service-desc">Lavado con tratamiento hidratante, cepillado liso o con ondas y serum protector.</p>
+          <a href="https://wa.me/?text=Hola%20quiero%20agendar%20Cepillado%20más%20Tratamiento" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-badge">Popular</span>
+          <h3 class="service-name">Color / Rayitos</h3>
+          <p class="service-price">Desde $120.000</p>
+          <p class="service-desc">Color global, rayitos o balayage con diagnóstico previo y tratamiento de cierre.</p>
+          <a href="https://wa.me/?text=Hola%20quiero%20agendar%20Color%20Rayitos" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card reveal">
+          <h3 class="service-name">Alisado Keratina</h3>
+          <p class="service-price">Desde $150.000</p>
+          <p class="service-desc">Alisado progresivo con keratina, lavado especial, planchado técnico y sellado.</p>
+          <a href="https://wa.me/?text=Hola%20quiero%20agendar%20Alisado%20Keratina" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card reveal">
+          <h3 class="service-name">Peinado Evento</h3>
+          <p class="service-price">$45.000</p>
+          <p class="service-desc">Recogidos, ondas o trenzas para eventos, con prueba de estilo y fijación premium.</p>
+          <a href="https://wa.me/?text=Hola%20quiero%20agendar%20Peinado%20Evento" class="service-cta">Agendar este servicio</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-badge">Combo</span>
+          <h3 class="service-name">Combo Dama Total</h3>
+          <p class="service-price">$70.000</p>
+          <p class="service-desc">Corte + cepillado + tratamiento hidratante profundo y bebida de cortesía.</p>
+          <a href="https://wa.me/?text=Hola%20quiero%20agendar%20Combo%20Dama%20Total" class="service-cta">Agendar este servicio</a>
+        </article>
+      </div>
+
+      <!-- Nota editable de precios -->
+      <p class="nota-precios reveal">Precios de ejemplo. Edítalos en <strong>servicios-dama.html</strong> según tu lista real.</p>
+    </section>
+  </main>
+
+  <!-- ===== BLOQUE: FOOTER - Cierre reutilizado ===== -->
+  <footer>
+    <a href="index.html" class="footer-logo">Dapper<span>.</span></a>
+    <p class="footer-tag">Peluquería &amp; Barbería</p>
+    <div class="footer-socials">
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+      </a>
+    </div>
+    <p class="footer-copy">© <span id="year">2026</span> Dapper Peluquería y Barbería. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ===== BLOQUE: WHATSAPP FLOTANTE ===== -->
+  <a href="https://wa.me/" class="float-whatsapp" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.6 5.95L0 24l6.32-1.66a11.8 11.8 0 0 0 5.72 1.46h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.18-1.24-6.17-3.41-8.43zM12.05 21.75a9.8 9.8 0 0 1-5.01-1.37l-.36-.21-3.75.98 1-3.65-.24-.38a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.84 9.84 0 0 1 7 2.9 9.83 9.83 0 0 1 2.9 6.99c-.01 5.45-4.45 9.88-9.93 9.88z" />
+    </svg>
+  </a>
+
+  <!-- ===== BLOQUE: SCRIPTS ===== -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
